@@ -42,6 +42,7 @@ class ConfigurationManagerTest: XCTestCase {
     override class func setUp() {
         do {
             print("starting")
+            print(executableFolder)
             print(symlinkInPWD.absoluteString)
             print(testJSONURL.absoluteString)
             print(symlinkInExecutableFolder.absoluteString)
@@ -49,7 +50,7 @@ class ConfigurationManagerTest: XCTestCase {
         }
         catch {
             // Nothing we can do but leave a failure message
-            print("failed to create", error.localizedDescription)
+            print("failed to create file 1", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
 
@@ -58,7 +59,7 @@ class ConfigurationManagerTest: XCTestCase {
         }
         catch {
             // Nothing we can do but leave a failure message
-            print("failed to create", error.localizedDescription)
+            print("failed to create file 2", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
         print("successful setup")
@@ -73,7 +74,7 @@ class ConfigurationManagerTest: XCTestCase {
             // Nothing we can do but leave a failure message
             XCTFail(error.localizedDescription)
         }
-
+    
         do {
             try FileManager.default.removeItem(at: symlinkInExecutableFolder)
         }

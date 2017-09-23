@@ -44,6 +44,7 @@ class ConfigurationManagerTest: XCTestCase {
             print("starting")
             print(symlinkInPWD)
             print(testJSONURL)
+            print(symlinkInExecutableFolder)
             try FileManager.default.createSymbolicLink(at: symlinkInPWD, withDestinationURL: testJSONURL)
         }
         catch {
@@ -57,8 +58,10 @@ class ConfigurationManagerTest: XCTestCase {
         }
         catch {
             // Nothing we can do but leave a failure message
+            print("failed to create")
             XCTFail(error.localizedDescription)
         }
+        print("successful setup")
     }
 
     // Delete test configuration file symlink created in setUp()

@@ -7,6 +7,7 @@
 [![codecov](https://codecov.io/gh/IBM-Swift/Configuration/branch/master/graph/badge.svg)](https://codecov.io/gh/IBM-Swift/Configuration)
 
 ## Summary
+
 `Configuration` is a Swift package for managing application configurations. Using `Configuration`, an application can easily load and merge configuration data from multiple sources and access them from one central configuration store.
 
 `Configuration` supports configuration keys as paths. That is, a key is a qualified path selector written in the `[parent]<separator>[child]` syntax. This allows applications to retrieve configuration objects at any level of specificity.

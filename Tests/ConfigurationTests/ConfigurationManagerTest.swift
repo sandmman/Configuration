@@ -49,7 +49,7 @@ class ConfigurationManagerTest: XCTestCase {
         }
         catch {
             // Nothing we can do but leave a failure message
-            print("failed to create")
+            print("failed to create", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
 
@@ -58,7 +58,7 @@ class ConfigurationManagerTest: XCTestCase {
         }
         catch {
             // Nothing we can do but leave a failure message
-            print("failed to create")
+            print("failed to create", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
         print("successful setup")

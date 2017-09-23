@@ -30,7 +30,7 @@ class ConfigurationManagerTest: XCTestCase {
         ]
     }
 
-    static let testJSONURL = URL(fileURLWithPath: #file).appendingPathComponent("../test.json").standardized
+    static let testJSONURL = URL(fileURLWithPath: #file).appendingPathComponent("test.json").standardized
 
     static let symlinkInPWD = URL(fileURLWithPath: "test.json")
 

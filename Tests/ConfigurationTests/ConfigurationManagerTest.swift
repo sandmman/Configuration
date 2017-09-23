@@ -42,9 +42,9 @@ class ConfigurationManagerTest: XCTestCase {
     override class func setUp() {
         do {
             print("starting")
-            print(symlinkInPWD)
-            print(testJSONURL)
-            print(symlinkInExecutableFolder)
+            print(symlinkInPWD.absoluteString)
+            print(testJSONURL.absoluteString)
+            print(symlinkInExecutableFolder.absoluteString)
             try FileManager.default.createSymbolicLink(at: symlinkInPWD, withDestinationURL: testJSONURL)
         }
         catch {

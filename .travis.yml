@@ -4,10 +4,6 @@
 # https://docs.travis-ci.com/user/multi-os/
 
 # whitelist (branches that should be built)
-branches:
-  only:
-    - master
-    - /^issue.*$/
 
 matrix:
   include:

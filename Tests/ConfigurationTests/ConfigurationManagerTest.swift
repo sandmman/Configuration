@@ -41,20 +41,28 @@ class ConfigurationManagerTest: XCTestCase {
     // Create symlink to test configuration file in PWD and executable folder
     override class func setUp() {
         do {
+            print("starting")
+            print(executableFolder)
+            print(symlinkInPWD.absoluteString)
+            print(testJSONURL.absoluteString)
+            print(symlinkInExecutableFolder.absoluteString)
             try FileManager.default.createSymbolicLink(at: symlinkInPWD, withDestinationURL: testJSONURL)
         }
         catch {
             // Nothing we can do but leave a failure message
+            print("failed to create file 1", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
-
+        
         do {
             try FileManager.default.createSymbolicLink(at: symlinkInExecutableFolder, withDestinationURL: testJSONURL)
         }
         catch {
             // Nothing we can do but leave a failure message
+            print("failed to create file 2", error.localizedDescription)
             XCTFail(error.localizedDescription)
         }
+        print("successful setup")
     }
 
     // Delete test configuration file symlink created in setUp()

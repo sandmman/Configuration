@@ -27,4 +27,5 @@ before_install:
     - git clone https://github.com/IBM-Swift/Package-Builder.git
 
 script:
+  - sudo chmod 755 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Xcode/Agents/
   - ./Package-Builder/build-package.sh -projectDir $TRAVIS_BUILD_DIR
